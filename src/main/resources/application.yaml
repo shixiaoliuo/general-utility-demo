@@ -1,0 +1,14 @@
+spring:
+  application:
+  name: General-Utility-Demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/mychatgpt
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      url: redis://123.57.181.19:30379
+utils:
+  dataMasking: true
+  cryptography: true
