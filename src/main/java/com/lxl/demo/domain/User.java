@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import com.lxl.utility.handlers.SecretHandler;
 import com.lxl.utility.markup.Secret;
 import com.lxl.utility.markup.Sensitive;
+import com.lxl.utility.markup.SensitiveLikeQuery;
 import com.lxl.utility.markup.WebDataMaskingConversion;
 import com.lxl.demo.parse.markup.WebLabelConversion;
 import com.lxl.demo.parse.constant.WebLabelNameEnum;
@@ -45,6 +46,7 @@ public class User {
      */
     @Secret
 //    @TableField(typeHandler = SecretHandler.class)
+    @SensitiveLikeQuery
     @WebDataMaskingConversion()
     private String password;
 

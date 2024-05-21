@@ -17,5 +17,5 @@ spring:
 
 
 persist:
-  dataMasking: false
+  dataMasking: true
   cryptography: true
