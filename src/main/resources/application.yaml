@@ -9,6 +9,13 @@ spring:
   data:
     redis:
       url: redis://123.57.181.19:30379
-utils:
-  dataMasking: true
+
+  # application.yml 中配置 Hibernate 自动创建表
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+persist:
+  dataMasking: false
   cryptography: true

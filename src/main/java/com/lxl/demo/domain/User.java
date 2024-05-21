@@ -44,7 +44,7 @@ public class User {
      *
      */
     @Secret
-    @TableField(typeHandler = SecretHandler.class)
+//    @TableField(typeHandler = SecretHandler.class)
     @WebDataMaskingConversion()
     private String password;
 
