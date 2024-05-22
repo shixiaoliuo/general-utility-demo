@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.lxl.demo.domain.User;
 import com.lxl.demo.service.UserService;
 import com.lxl.utility.data.Result;
+import com.lxl.utility.markup.SensitiveLikeQuery;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/user/list")
+//    @SensitiveLikeQuery
     public Result<List<User>> getUserList(@RequestBody User user) {
         return Result.success(userService.list(new LambdaQueryWrapper<User>()
                 .eq(StringUtils.isNotEmpty(user.getPassword()), User::getPassword, user.getPassword())
@@ -34,6 +36,7 @@ public class UserController {
     }
 
     @GetMapping("/user/getOne")
+    @SensitiveLikeQuery(business_key = "user")
     public Result<User> getUser(@RequestBody User user) {
         return Result.success(userService.getOne(new LambdaQueryWrapper<User>()
                 .eq(StringUtils.isNotEmpty(user.getPassword()), User::getPassword, user.getPassword())
