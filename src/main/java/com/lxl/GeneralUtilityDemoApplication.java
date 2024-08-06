@@ -13,6 +13,9 @@ public class GeneralUtilityDemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GeneralUtilityDemoApplication.class, args);
+        System.out.println("===========================================================");
+        System.out.println("==========================启动成功==========================");
+        System.out.println("===========================================================");
     }
 
 }
