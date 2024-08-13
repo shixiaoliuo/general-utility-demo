@@ -267,5 +267,4 @@ $RECYCLE.BIN/
 
 target/
 .mvn/
-!/.idea/
-!/target/
+/.idea/
