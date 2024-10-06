@@ -20,3 +20,9 @@ persist:
   dataMasking: true
   cryptography: true
   likeQuery: true
+
+security:
+  ignore:
+    urls:
+      - /user/list
+      - /save

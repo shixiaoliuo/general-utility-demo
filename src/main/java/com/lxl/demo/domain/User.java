@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.lxl.utility.handlers.SecretHandler;
 import com.lxl.utility.markup.Secret;
 import com.lxl.utility.markup.Sensitive;
@@ -53,6 +54,7 @@ public class User {
     /**
      *
      */
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime createTime;
 
