@@ -15,6 +15,18 @@ spring:
     hibernate:
       ddl-auto: update
 
+  rhino-boot-turbo:
+    global-enable: true
+
+
+logging:
+  file:
+    path: /var/log
+  level:
+    org:
+      springframework:
+        security: DEBUG
+      jooq: DEBUG
 
 persist:
   dataMasking: true
@@ -24,5 +36,6 @@ persist:
 security:
   ignore:
     urls:
-      - /user/list
+      - /user/**
       - /save
+      - /export

@@ -25,9 +25,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- *
- * @Description 数据填充处理器
  * @author liuxinlei
+ * @Description 数据填充处理器
  * @date 2024/4/30 15:38
  */
 @Component
@@ -106,6 +105,7 @@ public class DataFormatHandler implements ApplicationContextAware {
 
     /**
      * 金额千分位
+     *
      * @param type
      * @param value
      * @param webLabelConversionMap
